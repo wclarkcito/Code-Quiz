@@ -12,15 +12,47 @@
 
 
 <body>
+
+    <header>
+        <p id="viewScore"> View Score</p>
+        <span id="timer"></span>
+    </header>
     
-   
-    <div id="quiz"></div>
-    <button id="submit">Submit Quiz</button>
-    <div id="results"></div>
+    <main>
+        <!-- landing page -->
+        <section id="mainpage-quiz" >
+            <h1>title</h1>
+
+            <p>description of the quiz</p>
+            <button id="startQuiz">Start Quiz</button>
+        </section>
+
+        <!-- quiz page -->
+        <section id="questionpage-quiz" class="hide">
+            <h3 id="questions"></h3>
+
+            <ul id="answers">
+
+            </ul>
+     
+        </section>
+
+        <!-- final score page -->
+        <section id='finalpage-quiz' class="hide">
+            <h2>Congratulations</h2>
+            <h4>Final score: <span id='display-score'></span></h4>
+        </section>
+
+        <!-- highscore page -->
+        <section id="highscorepage-quiz" class="hide">
+            <h2>HighScores</h2>
+            <div id="highscore-container"></div>
+            <button id="go-back">Go back</button>
+
+        </section>
 
 
-
-
+    </main>
 
 <script src = "Assets/script.js"></script>
 </body>
