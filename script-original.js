@@ -12,7 +12,7 @@ var quizQuestions = [
         correctAnswer: "China"
     },
 {
-    question: "What breed of dog has the most health problems?",
+    question3: "What breed of dog has the most health problems?",
     possibilities: {
         a: "Doberman",
         b: "Golden Retriever",
@@ -22,7 +22,7 @@ var quizQuestions = [
     correctAnswer: "c"
 },
 {
-    question: "Where is the hottest recorded temperature on earth?",
+    question4: "Where is the hottest recorded temperature on earth?",
     possibilities: {
         a: "Dallas, Tx",
         b: "Damascus, Syria",
@@ -32,7 +32,7 @@ var quizQuestions = [
     correctAnswer: "d"
 },
 {
-    question: "what organized crime group is the most powerful in the world",
+    question5: "what organized crime group is the most powerful in the world",
     possibilities: {
         a: "Italian Mafia",
         b: "Mexican Cartel",
@@ -42,7 +42,7 @@ var quizQuestions = [
     correctAnswer: "d"
 },
 {
-    question: "what is the most popular cereal in the world",
+    question6: "what is the most popular cereal in the world",
     possibilities: {
         a: "Frosted Flakes",
         b: "Honey Nut Cheerios",
@@ -53,7 +53,7 @@ var quizQuestions = [
 },
 
 {
-    question: "what is the worlds most popular beer",
+    question7: "what is the worlds most popular beer",
     possibilities: {
         a: "Budweiser",
         b: "Snow",
@@ -63,7 +63,7 @@ var quizQuestions = [
     correctAnswer: "b"
 },
 {
-    question: "What is the most profitable industry in the world?",
+    question8: "What is the most profitable industry in the world?",
     possibilities: {
         a: "Pharmaceuticals",
         b: "Tobacco",
@@ -73,7 +73,7 @@ var quizQuestions = [
     correctAnswer: "c"
 },
 {
-    question: "What is the most expensive city in the world to live?",
+    question9: "What is the most expensive city in the world to live?",
     possibilities: {
         a: "Sydney, Australia",
         b: "Hong Kong",
@@ -85,7 +85,7 @@ var quizQuestions = [
 },
 
 {
-    question: "What was the first country in the world?",
+    question0: "What was the first country in the world?",
     possibilities: {
         a: "Greece",
         b: "Japan",

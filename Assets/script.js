@@ -11,6 +11,55 @@ var quizQuestions = [
         possibilities: ['USA', 'France', 'China', "Russia"],
         correctAnswer: "China"
     },
+    question3 = {
+        question: "What breed of dog has the most health problems?",
+        possibilities: ["Doberman", "Golden Retriever", "cocker Spaniel", "German Shephard"],
+        correctAnswer: "c"
+    },
+{
+    question4 = {
+        question: "Where is the hottest recorded temperature on earth?",
+        possibilities: ["Dallas, Tx", "Damascus, Syria", "Amman, Jordan", "Death Valley, Ca"],
+        correctAnswer: "d"
+},
+
+    question5: {
+        question: "what organized crime group is the most powerful in the world?",
+        possibilities: ["Italian Mafia", "Mexican Cartel", "Japanese Mafia/Yakuza", "Russian Mafia"],
+        correctAnswer: "d"
+},
+
+    question6: {
+        question: "what is the most popular cereal in the world?",
+        possibilities: ["Frosted Flakes", "Honey Nut Cheerios", "Corn Flakes", "Raisin Bran" ],
+        correctAnswer: "b"
+},
+
+    question7: {
+        question: "what is the worlds most popular beer?",
+        possibilities: ["Budweiser", "Snow", "Corona", "Tsingtao"],
+        correctAnswer: "b"
+},
+
+    question8: {
+        question: "What is the most profitable industry in the world?",
+        possibilities: ["Pharmaceuticals", "Tobacco", "Mining, Crude-Oil Production", "Food Consumer Products"],
+        correctAnswer: "c"
+},
+
+    question9: {
+        question: "What is the most expensive city in the world to live?",
+        possibilities: ["Sydney, Australia", "Hong Kong", "Los Angeles, Ca","San Francisco, Ca"],
+        correctAnswer: "b"
+},
+
+
+    question0: {
+        question: "What was the first country in the world?",
+        possibilities: ["Greece", "Japan", "Egypt", "Ethiopia"],
+        correctAnswer: "d"
+},
+
 
 ];
 var highScores = []
@@ -23,7 +72,7 @@ var timer = document.getElementById("timer");
 var mainPage = document.getElementById('mainpage-quiz');
 /*
 create variables based of IDs
-*/
+*/var start=document.getElementById("startQuiz");
 
 // quiz page
 var quizPage = document.getElementById("questionpage-quiz");
@@ -39,9 +88,12 @@ create variables based of IDs
 
 //highscore page
 var highscorePage = document.getElementById('highscorepage-quiz')
+
+
 /*
 create variables based of IDs
 */
+
 
 var pageArray = [mainPage, quizPage, finalScorePage, highscorePage];
 
@@ -60,7 +112,7 @@ var quiz = false; //turning true when question display
 var quizTime = 60;
 
 var secondsLeft; //current number left of seconds
-timer.textContent = "Time: " + quizTime;
+timer.textContent = secondsLeft + "Time: " + quizTime;
 
 var finalScore= 0;
 var numberCorrect;
