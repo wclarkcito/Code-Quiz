@@ -1,3 +1,5 @@
+
+
 //objects within array//
 var quizQuestions = [
     
@@ -16,54 +18,54 @@ var quizQuestions = [
         possibilities: ["Doberman", "Golden Retriever", "cocker Spaniel", "German Shephard"],
         correctAnswer: "c"
     },
-{
+    {
     question4 = {
         question: "Where is the hottest recorded temperature on earth?",
         possibilities: ["Dallas, Tx", "Damascus, Syria", "Amman, Jordan", "Death Valley, Ca"],
         correctAnswer: "d"
-},
+    },
 
     question5: {
         question: "what organized crime group is the most powerful in the world?",
         possibilities: ["Italian Mafia", "Mexican Cartel", "Japanese Mafia/Yakuza", "Russian Mafia"],
         correctAnswer: "d"
-},
+    },
 
     question6: {
         question: "what is the most popular cereal in the world?",
         possibilities: ["Frosted Flakes", "Honey Nut Cheerios", "Corn Flakes", "Raisin Bran" ],
         correctAnswer: "b"
-},
+    },
 
     question7: {
         question: "what is the worlds most popular beer?",
         possibilities: ["Budweiser", "Snow", "Corona", "Tsingtao"],
         correctAnswer: "b"
-},
+    },
 
     question8: {
         question: "What is the most profitable industry in the world?",
         possibilities: ["Pharmaceuticals", "Tobacco", "Mining, Crude-Oil Production", "Food Consumer Products"],
         correctAnswer: "c"
-},
+    },
 
     question9: {
         question: "What is the most expensive city in the world to live?",
         possibilities: ["Sydney, Australia", "Hong Kong", "Los Angeles, Ca","San Francisco, Ca"],
         correctAnswer: "b"
-},
+    },
 
 
     question0: {
         question: "What was the first country in the world?",
         possibilities: ["Greece", "Japan", "Egypt", "Ethiopia"],
         correctAnswer: "d"
-},
+    },
 
 
 ];
 var highScores = []
-var submitButton = document.getElementById('startQuiz');
+var submitButton = document.getElementById("startQuiz");
 //header
 var viewScore = document.getElementById("viewScore");
 var timer = document.getElementById("timer");
@@ -72,28 +74,31 @@ var timer = document.getElementById("timer");
 var mainPage = document.getElementById('mainpage-quiz');
 /*
 create variables based of IDs
-*/var start=document.getElementById("startQuiz");
+*/
 
 // quiz page
 var quizPage = document.getElementById("questionpage-quiz");
 /*
-create variables based of IDs
+create variables based of IDs 1/18
 */
-
+var quizQuestion = document.getElementById("questions");
+var quizAnswers = document.getElementById("answers");
 // final score page
 var finalScorePage = document.getElementById("finalpage-quiz");
 /*
-create variables based of IDs
+create variables based of IDs 1/18
 */
+var score = document.getElementById("display-score");
 
 //highscore page
 var highscorePage = document.getElementById('highscorepage-quiz')
 
 
 /*
-create variables based of IDs
+create variables based of IDs 1/18
 */
-
+var highContainer = document.getElementById("highscore-container");
+var goBackBtn = document.getElementById("go-back");
 
 var pageArray = [mainPage, quizPage, finalScorePage, highscorePage];
 
