@@ -7,3 +7,19 @@
 body{
     text-align: center;
 }
+
+#answers{
+    list-style-type: none;
+    padding: 0;
+
+}
+
+#answers li{
+    padding: 0.5em 2em;
+    font-size: 17px;
+    box-sizing:border-box;
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px auto;
+    cursor: pointer;
+}

@@ -1,6 +1,7 @@
 
 
 //objects within array//
+var timer;
 var quizQuestions = [
     
     {
@@ -74,8 +75,8 @@ submitButton.addEventListener("click", e=>{
     startQuiz()
 })
 //header
-var viewScore = document.getElementById("viewScore");
-var timer = document.getElementById("timer");
+
+var timerDisplay = document.getElementById("timer");
 
 // landing page
 var mainPage = document.getElementById('mainpage-quiz');
@@ -92,8 +93,8 @@ var finalScorePage = document.getElementById("finalpage-quiz");
 /*
 create variables based of IDs 
 */
-var score = document.getElementById("display-score");
-
+var displayScore = document.getElementById("display-score");
+var score=0;
 //highscore page
 var highscorePage = document.getElementById('highscorepage-quiz')
 
@@ -123,7 +124,25 @@ function generateQuestion(arr, index){
 //enumerates correct answers
 function nextQuestion(point, index){
     score += point;
-    generateQuestion(quizQuestions, index);
+    if(index === quizQuestions.length){
+        quiz = false;
+        endGame()
+        clearInterval(timer);
+    }else{
+        generateQuestion(quizQuestions, index);
+        
+    }
+    
+}
+
+function endGame(){
+    hidePages();
+    finalScorePage.classList.remove("hide")
+    displayScore.innerHTML=score;
+    let button = document.createElement("button");
+    button.innerText = "start new quiz";
+    button.addEventListener("click", e=> startQuiz());
+    finalScorePage.appendChild(button);
 }
 function hidePages() {
     for(var i = 0; i < pageArray.length; i++) {
@@ -133,15 +152,28 @@ function hidePages() {
     }
 }
 
-var quiz = false; //turning true when question display
+//Timer Function
+var quiz = false; 
+function startTimer(flag){
+    if(!quiz){
+    var timeLeft = 60;
+     timer = setInterval(function(){
+        timeLeft--;
+        timerDisplay.innerHTML=timeLeft;
+        if(timeLeft <= 0 ){
+            clearInterval(timer);
+            endGame()
+        }
+
+    }, 1000)}
+    
+}
+
 var quizTime = 60;
 
 var secondsLeft; //current number left of seconds
-timer.textContent = secondsLeft + "Time: " + quizTime;
+timerDisplay.textContent = secondsLeft + "Time: " + quizTime;
 
-var finalScore= 0;
-var numberCorrect;
-var numberIncorrect;
 var questionIndex;
 
 function questionOrder(arr) {
@@ -153,9 +185,9 @@ function questionOrder(arr) {
 }
 
 function startQuiz() {
+    startTimer(true)
     alert("quiz started");
-    numberIncorrect = 0;
-    numberCorrect =0;
+    score = 0;
 
     quiz = true;
     questionIndex = 0;
