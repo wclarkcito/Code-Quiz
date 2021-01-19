@@ -10,7 +10,7 @@ var quizQuestions = [
     },
      {
         question: "What country has the largest population?",
-        possibilities: ['USA', 'France', 'China', "Russia"],
+        possibilities: ['USA', 'India', 'China', "Russia"],
         correctAnswer: "China"
     },
     {
@@ -64,8 +64,12 @@ var quizQuestions = [
 
 
 ];
+
+
+
 var highScores = []
 var submitButton = document.getElementById("startQuiz");
+
 submitButton.addEventListener("click", e=>{
     startQuiz()
 })
@@ -75,53 +79,48 @@ var timer = document.getElementById("timer");
 
 // landing page
 var mainPage = document.getElementById('mainpage-quiz');
-/*
-create variables based of IDs
-*/
 
 // quiz page
 var quizPage = document.getElementById("questionpage-quiz");
 /*
-create variables based of IDs 1/18
+create variables based of IDs 
 */
 var quizQuestion = document.getElementById("questions");
 var quizAnswers = document.getElementById("answers");
 // final score page
 var finalScorePage = document.getElementById("finalpage-quiz");
 /*
-create variables based of IDs 1/18
+create variables based of IDs 
 */
 var score = document.getElementById("display-score");
 
 //highscore page
 var highscorePage = document.getElementById('highscorepage-quiz')
 
-
-/*
-create variables based of IDs 1/18
-*/
 var highContainer = document.getElementById("highscore-container");
 var goBackBtn = document.getElementById("go-back");
 
 var pageArray = [mainPage, quizPage, finalScorePage, highscorePage];
-//created function to list questions and the 
+
+
+//created function to list and answer questions
 function generateQuestion(arr, index){
     quizQuestion.innerHTML=arr[index].question;
     quizAnswers.innerHTML="";
     arr[index].possibilities.forEach(element => {
-    var listItem = document.createElement("li");
+    let listItem = document.createElement("li");
     listItem.innerHTML=element;
     listItem.addEventListener("click", e=>{
         console.log("answer clicked")
         
-        var point = element === arr[index].correctAnswer? 1: 0;
+        let point = element === arr[index].correctAnswer? 1: 0;
         console.log(point)
         nextQuestion(point, index +1);
     }); 
     quizAnswers.appendChild(listItem);  
     });
 }
-
+//enumerates correct answers
 function nextQuestion(point, index){
     score += point;
     generateQuestion(quizQuestions, index);
