@@ -99,7 +99,7 @@ var score=0;
 var highscorePage = document.getElementById('highscorepage-quiz')
 
 var highContainer = document.getElementById("highscore-container");
-var goBackBtn = document.getElementById("go-back");
+//var goBackBtn = document.getElementById("go-back");
 
 var pageArray = [mainPage, quizPage, finalScorePage, highscorePage];
 

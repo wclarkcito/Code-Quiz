@@ -1,12 +1,32 @@
-
+#mainpage-quiz{
+    text-align: center;
+}
 
 .hide {
     display:none;
 }
 
-body{
+h1, #questions {
+    font-size: 50px;
+    color: black;
     text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  }
+
+p,#start-Quiz{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+      
 }
+
+/*body{
+    background-image: url("https://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}*/
 
 #answers{
     list-style-type: none;
@@ -22,4 +42,8 @@ body{
     text-align: center;
     margin: 10px auto;
     cursor: pointer;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
 }
