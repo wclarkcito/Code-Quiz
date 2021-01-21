@@ -1,6 +1,6 @@
 # Code-Quiz
 
-## This is a program that generates 10 random quiz questions with 4 possible answers. The correct answers are stored and a high score is displayed upon completion.
+## This is a program that generates 10 random quiz questions with 4 possible answers. The participant has 60 seconds to complete the quiz. The correct answers are stored and the score is displayed upon completion.
 
 ## https://github.com/wclarkcito/Code-Quiz
 
